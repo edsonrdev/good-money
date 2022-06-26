@@ -11,7 +11,7 @@ export const Summary = () => {
           <p>Entradas</p>
           <img src={incomeImg} alt="Entradas" />
         </header>
-        <strong>R$ 1212,00</strong>
+        <strong>R$ 1.212,00</strong>
       </div>
 
       <div>
@@ -19,7 +19,7 @@ export const Summary = () => {
           <p>Saídas</p>
           <img src={outcomeImg} alt="Saídas" />
         </header>
-        <strong>R$ -1254,87</strong>
+        <strong>R$ -182,11</strong>
       </div>
 
       <div className="highlight-background">
@@ -27,7 +27,7 @@ export const Summary = () => {
           <p>Total</p>
           <img src={totalImg} alt="Total" />
         </header>
-        <strong>R$ -42,87</strong>
+        <strong>R$ 1.029,89</strong>
       </div>
     </Container>
   );
