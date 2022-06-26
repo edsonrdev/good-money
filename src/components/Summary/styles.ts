@@ -18,6 +18,10 @@ export const Container = styled.main`
       color: var(--shape);
     }
 
+    &:hover {
+      filter: brightness(0.97);
+    }
+
     header {
       display: flex;
       align-items: center;
