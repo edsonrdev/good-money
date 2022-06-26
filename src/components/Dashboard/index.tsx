@@ -1,9 +1,10 @@
 import { Container } from "./styles";
+import { Summary } from "../Summary";
 
 export const Dashboard = () => {
   return (
     <Container>
-      <h1>Dashboard</h1>
+      <Summary />
     </Container>
   );
 };
