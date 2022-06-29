@@ -13,7 +13,7 @@ Modal.setAppElement("#root");
 export const App = () => {
   /*
     -------------------------------------------------------------
-    PROPS NECESSÁRIAS PRO MODAL
+    PROPS NECESSÁRIAS PRO REACT MODAL
     -------------------------------------------------------------
     isOpen -> aberto / fechado
     onRequestClose -> o que acontecer nos eventos de fechar modal
@@ -25,6 +25,7 @@ export const App = () => {
   // callbacks para abrir / fechar modal de transações
   const openNewTransactionModal = () => setNewTransactionModalOpen(true);
   const closeNewTransactionModal = () => setNewTransactionModalOpen(false);
+
   return (
     <>
       <GlobalStyle />
