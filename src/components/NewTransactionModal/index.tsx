@@ -43,6 +43,7 @@ export const NewTransactionModal = ({
             type="button"
             onClick={() => setTypeTransaction("deposit")}
             isActive={typeTransaction === "deposit"}
+            activeColor="green"
           >
             <img src={incomeImg} alt="Entradas" /> Entradas
           </RadioBox>
@@ -51,6 +52,7 @@ export const NewTransactionModal = ({
             type="button"
             onClick={() => setTypeTransaction("withdraw")}
             isActive={typeTransaction === "withdraw"}
+            activeColor="red"
           >
             <img src={outcomeImg} alt="Saídas" /> Saídas
           </RadioBox>
