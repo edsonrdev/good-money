@@ -1,5 +1,6 @@
 import { useState, FormEvent } from "react";
 
+import { api } from "../../services/api";
 import { Container, TransactionTypeContainer, RadioBox } from "./styles";
 
 import closeImg from "../../assets/close.svg";
@@ -25,12 +26,14 @@ export const NewTransactionModal = ({
   const handleCreateNewTransaction = (event: FormEvent) => {
     event.preventDefault();
 
-    console.log({
+    const data = {
       title,
       value,
       category,
       typeTransaction,
-    });
+    };
+
+    api.post("/transactions", data);
   };
 
   return (
