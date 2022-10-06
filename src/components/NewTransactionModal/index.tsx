@@ -19,7 +19,7 @@ export const NewTransactionModal = ({
   onRequestClose,
 }: NewTransactionModalProps) => {
   const [title, setTitle] = useState("");
-  const [value, setValue] = useState(0);
+  const [amount, setAmount] = useState(0);
   const [category, setCategory] = useState("");
   const [typeTransaction, setTypeTransaction] = useState("deposit");
 
@@ -27,10 +27,12 @@ export const NewTransactionModal = ({
     event.preventDefault();
 
     const data = {
+      id: Math.random() * 10000,
       title,
-      value,
+      amount,
       category,
       typeTransaction,
+      createdAt: new Date(),
     };
 
     api.post("/transactions", data);
@@ -66,8 +68,8 @@ export const NewTransactionModal = ({
           min="0"
           step="0.01"
           placeholder="Valor"
-          value={value}
-          onChange={(event) => setValue(Number(event.target.value))}
+          value={amount}
+          onChange={(event) => setAmount(Number(event.target.value))}
         />
 
         <TransactionTypeContainer>

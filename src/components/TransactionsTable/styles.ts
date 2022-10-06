@@ -2,12 +2,13 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   max-width: 1120px;
-  margin: 0 auto;
+  margin: auto;
+  margin-bottom: 60px;
   /* margin-top: 4rem; */
 
   table {
     width: 100%;
-    border-spacing: 0 0.75rem;
+    border-spacing: 0 0.25rem;
 
     th {
       color: var(--text-body);
@@ -36,6 +37,7 @@ export const Container = styled.div`
     tbody tr {
       box-shadow: 0 0.15rem 0 0.05rem rgba(0, 0, 0, 0.02);
       overflow: hidden;
+      transition: filter 0.15s ease-in-out;
 
       &:hover {
         filter: brightness(0.97);
