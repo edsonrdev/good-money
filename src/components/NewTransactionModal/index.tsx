@@ -20,19 +20,18 @@ export const NewTransactionModal = ({
 }: NewTransactionModalProps) => {
   const [title, setTitle] = useState("");
   const [amount, setAmount] = useState(0);
+  const [type, setType] = useState("deposit");
   const [category, setCategory] = useState("");
-  const [typeTransaction, setTypeTransaction] = useState("deposit");
 
   const handleCreateNewTransaction = (event: FormEvent) => {
     event.preventDefault();
 
     const data = {
-      id: Math.random() * 10000,
       title,
       amount,
+      type,
       category,
-      typeTransaction,
-      createdAt: new Date(),
+      // createdAt: new Date(),
     };
 
     api.post("/transactions", data);
@@ -75,8 +74,8 @@ export const NewTransactionModal = ({
         <TransactionTypeContainer>
           <RadioBox
             type="button"
-            onClick={() => setTypeTransaction("deposit")}
-            isActive={typeTransaction === "deposit"}
+            onClick={() => setType("deposit")}
+            isActive={type === "deposit"}
             activeColor="green"
           >
             <img src={incomeImg} alt="Entradas" /> Entradas
@@ -84,8 +83,8 @@ export const NewTransactionModal = ({
 
           <RadioBox
             type="button"
-            onClick={() => setTypeTransaction("withdraw")}
-            isActive={typeTransaction === "withdraw"}
+            onClick={() => setType("withdraw")}
+            isActive={type === "withdraw"}
             activeColor="red"
           >
             <img src={outcomeImg} alt="Saídas" /> Saídas
